@@ -1,11 +1,18 @@
 {
-  "start_btn": "Buying tickets",
-  "top_title": "A special moment walking over Chilgap Lake,",
-  "main_title": "Welcome to \nChilgap Tower",
-  "sub_title": "Select a Service",
+  "start_btn": "Purchase Ticket",
+  "top_title": "Where tradition meets technology,\nconnecting past, present, and future",
+  "main_title": "Welcome to\nJeongeup National Heritage Media Art Hall",
+  "sub_title": "Please select a service",
+  "contrast_btn": "High Contrast",
+  "screen_btn": "Lower Screen",
+  "magnify_btn": "Zoom In",
   "group_notice_modal": {
     "title": "Group Notice",
-    "content": "Group ({{groupSize}} or more) please purchase tickets at the manned ticket office",
-    "ok_button": "Confirm"
+    "content": "For groups ({{groupSize}} or more people), please issue your tickets at the manned ticket booth.",
+    "ok_button": "OK"
+  },
+  "discount_info_page": {
+    "yes_discount_btn": "Eligible for\nAdmission Discount",
+    "no_discount_btn": "Not Eligible for\nAdmission Discount"
   }
 }

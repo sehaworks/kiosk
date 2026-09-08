@@ -1,11 +1,18 @@
 {
-  "start_btn": "チケット購入",
-  "top_title": "チルガプ湖の上を歩く特別な瞬間、",
-  "main_title": "チルガプタワーへ\nようこそ",
-  "sub_title": "ご希望のサービスを選択してください",
+  "start_btn": "現地チケット購入",
+  "top_title": "伝統と技術が出会い、過去と現在、\nそして未来をつなぐ空間",
+  "main_title": "井邑（ジョンウプ）国家遺産メディアアート館へ\nようこそ",
+  "sub_title": "ご希望 survey のサービスを選択してください",
+  "contrast_btn": "ハイコントラスト",
+  "screen_btn": "画面を下げる",
+  "magnify_btn": "拡大",
   "group_notice_modal": {
-    "title": "団体案内",
-    "content": "団体({{groupSize}}名以上)は無料アトラクションセンターでチケットを購入してください",
+    "title": "団体のご案内",
+    "content": "団体（{{groupSize}}名様以上）のお客様は有人チケット窓口にて発券をお受け取りください",
     "ok_button": "確認"
+  },
+  "discount_info_page": {
+    "yes_discount_btn": "入場料割引\n対象者です",
+    "no_discount_btn": "入場料割引\n対象ではありません"
   }
 }

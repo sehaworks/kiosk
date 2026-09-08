@@ -1,11 +1,18 @@
 {
-  "start_btn": "买票",
-  "top_title": "漫步在七甲湖上的特别时刻,",
-  "main_title": "欢迎来到Chilgap塔",
-  "sub_title": "请选择服务",
+  "start_btn": "现场购票",
+  "top_title": "传统与科技交融\n连接过去、现在与未来的空间",
+  "main_title": "欢迎光临\n井邑国家遗产媒体艺术馆",
+  "sub_title": "请选择您需要的服务",
+  "contrast_btn": "高对比度",
+  "screen_btn": "低屏幕",
+  "magnify_btn": "放大",
   "group_notice_modal": {
-    "title": "团体通知",
-    "content": "团体（{{groupSize}}人以上）请到人工售票处购买门票",
+    "title": "团体须知",
+    "content": "团体（{{groupSize}}人以上）请至人工售票处领票",
     "ok_button": "确认"
+  },
+  "discount_info_page": {
+    "yes_discount_btn": "符合\n门票优惠条件",
+    "no_discount_btn": "不符合\n门票优惠条件"
   }
 }
