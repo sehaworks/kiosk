@@ -1,0 +1,209 @@
+@font-face {
+  font-family: 'Pretendard';
+  src:
+    url('../assets/fonts/Pretendard-Thin.woff2') format('woff2'),
+    url('../assets/fonts/Pretendard-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src:
+    url('../assets/fonts/Pretendard-ExtraLight.woff2') format('woff2'),
+    url('../assets/fonts/Pretendard-ExtraLight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src:
+    url('../assets/fonts/Pretendard-Light.woff2') format('woff2'),
+    url('../assets/fonts/Pretendard-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src:
+    url('../assets/fonts/Pretendard-Regular.woff2') format('woff2'),
+    url('../assets/fonts/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src:
+    url('../assets/fonts/Pretendard-Medium.woff2') format('woff2'),
+    url('../assets/fonts/Pretendard-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src:
+    url('../assets/fonts/Pretendard-SemiBold.woff2') format('woff2'),
+    url('../assets/fonts/Pretendard-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src:
+    url('../assets/fonts/Pretendard-Bold.woff2') format('woff2'),
+    url('../assets/fonts/Pretendard-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src:
+    url('../assets/fonts/Pretendard-ExtraBold.woff') format('woff'),
+    url('../assets/fonts/Pretendard-ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src:
+    url('../assets/fonts/Pretendard-Black.woff') format('woff'),
+    url('../assets/fonts/Pretendard-Black.woff2') format('woff2');
+
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* 전역 기본 폰트 지정 */
+/* body {
+  font-family: 'Pretendard';
+} */
+
+/* ----------------- 일본어 폰트 ----------------- */
+
+@font-face {
+  font-family: 'Pretendard JP';
+  src:
+    url('../assets/fonts/jp/PretendardJP-Thin.woff2') format('woff2'),
+    url('../assets/fonts/jp/PretendardJP-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pretendard JP';
+  src:
+    url('../assets/fonts/jp/PretendardJP-ExtraLight.woff2') format('woff2'),
+    url('../assets/fonts/jp/PretendardJP-ExtraLight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pretendard JP';
+  src:
+    url('../assets/fonts/jp/PretendardJP-Light.woff2') format('woff2'),
+    url('../assets/fonts/jp/PretendardJP-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pretendard JP';
+  src:
+    url('../assets/fonts/jp/PretendardJP-Regular.woff2') format('woff2'),
+    url('../assets/fonts/jp/PretendardJP-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pretendard JP';
+  src:
+    url('../assets/fonts/jp/PretendardJP-Medium.woff2') format('woff2'),
+    url('../assets/fonts/jp/PretendardJP-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pretendard JP';
+  src:
+    url('../assets/fonts/jp/PretendardJP-SemiBold.woff2') format('woff2'),
+    url('../assets/fonts/jp/PretendardJP-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pretendard JP';
+  src:
+    url('../assets/fonts/jp/PretendardJP-Bold.woff2') format('woff2'),
+    url('../assets/fonts/jp/PretendardJP-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pretendard JP';
+  src:
+    url('../assets/fonts/jp/PretendardJP-ExtraBold.woff2') format('woff2'),
+    url('../assets/fonts/jp/PretendardJP-ExtraBold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pretendard JP';
+  src:
+    url('../assets/fonts/jp/PretendardJP-Black.woff2') format('woff2'),
+    url('../assets/fonts/jp/PretendardJP-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* 기본(한국어/영어) */
+body {
+  font-family:
+    'Pretendard',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Apple SD Gothic Neo',
+    'Malgun Gothic',
+    'Roboto',
+    'Noto Sans',
+    system-ui,
+    sans-serif;
+}
+
+/* 일본어 페이지 */
+html:lang(ja) body {
+  font-family:
+    'Pretendard JP', 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Meiryo',
+    system-ui, sans-serif;
+}
+
+/* 중국어 - 간체(zh, zh-CN, zh-SG) */
+html[lang^='zh'] body,
+html:lang(zh-CN) body,
+html:lang(zh) body {
+  font-family:
+    'Pretendard JP', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei',
+    system-ui, sans-serif;
+}
+
+/* 중국어 - 번체(zh-TW, zh-HK, zh-MO) */
+html:lang(zh-TW) body,
+html:lang(zh-HK) body,
+html:lang(zh-MO) body {
+  font-family:
+    'Pretendard JP', 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei',
+    system-ui, sans-serif;
+}

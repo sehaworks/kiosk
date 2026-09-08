@@ -1,0 +1,257 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: #00000099;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* 모달 컨테이너 */
+.modal {
+  width: 80%;
+  height: 67vh;
+  background: var(--white);
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 30px;
+}
+
+/* 헤더 */
+.header {
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title {
+  margin: 0 0 8px 0;
+  font-size: 50px;
+  color: var(--black-font);
+  font-weight: 700;
+}
+
+/* 본문: 스크롤 영역 */
+.content {
+  flex: 1 1 auto; /* 남는 공간 모두 차지 */
+  min-height: 0;
+  padding: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.subInfo {
+  flex: 0 0 auto;
+  color: var(--gray-font);
+  font-weight: 500;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.em {
+  color: var(--blue-font);
+  font-size: 36px;
+  font-weight: 700;
+  margin-left: 12px;
+}
+
+.cartList {
+  flex: 1 1 auto; /* 컨텐츠 영역에서 남는 공간 */
+  min-height: 0;
+  overflow-y: auto; /* 세로 스크롤 */
+  -webkit-overflow-scrolling: touch;
+  padding-right: 4px; /* 스크롤바와 컨텐츠 간격 */
+}
+
+/* 푸터: 총액 + 버튼들 고정 */
+.footer {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  /* padding: 16px 24px; */
+  background: #fff;
+  gap: 16px;
+}
+.totalBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  padding: 35px 30px;
+}
+.totalLabel {
+  color: var(--gray-font);
+  font-size: 30px;
+  font-weight: 500;
+}
+.totalValue {
+  font-size: 56px;
+  font-weight: 700;
+  color: var(--blue-font);
+}
+.unit {
+  margin-left: 4px;
+  font-size: 56px;
+  font-weight: 700;
+  color: var(--blue-font);
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  padding: 10px 10px;
+}
+.cancelBtn,
+.nextBtn {
+  height: 130px;
+  border-radius: 20px;
+  font-size: 50px;
+  font-weight: 700;
+  border: 0;
+  cursor: pointer;
+  /* 클릭 시 효과 제거 */
+  -webkit-tap-highlight-color: transparent;
+}
+.cancelBtn {
+  background: var(--dark-gray);
+  color: var(--white-font);
+}
+.nextBtn {
+  background: var(--mize-blue);
+  color: var(--white-font);
+}
+.nextBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* 빈 상태 */
+.empty {
+  height: 260px;
+  display: grid;
+  place-items: center;
+  color: var(--gray-font);
+  font-size: 30px;
+  font-weight: 600;
+}
+
+
+/* 낮은화면 */
+.overlay.down {
+  height: 720px;
+  position: fixed;
+  top: calc(100% - 720px);
+}
+.overlay.down .modal {
+  max-height: 600px;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 40px;
+}
+.overlay.down .header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 0;
+  margin: 0;
+  height: 40px;
+}
+.overlay.down .title {
+  font-size: 34px;
+  padding: 0;
+  margin: 0
+}
+.overlay.down .subtitle {
+  padding: 0;
+  margin: 0;
+  font-size: 24px;
+}
+.overlay.down .subInfo,
+.overlay.down .subInfo .em {
+  font-size: 28px;
+}
+.overlay.down .cartList {
+  background-color: var(--background-gray);
+  border-radius: 15px;
+  padding: 24px;
+}
+.overlay.down .cartList article {
+  border: none !important;
+  padding: 12px 0px !important; 
+  height: fit-content !important;
+  margin-bottom: 0px !important;
+}
+.overlay.down .cartList article div,
+.overlay.down .cartList article span {
+  font-size: 24px;
+}
+
+.overlay.down .footer {
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+.overlay.down .footer .totalBox {
+  padding: 15px;
+}
+.overlay.down .footer .totalBox span {
+  font-size: 28px;
+}
+.overlay.down .footer button {
+  font-size: 34px !important;
+  height: 88px !important;
+  width: 180px !important;
+}
+.overlay.down .footer .actions {
+  display: flex;
+}
+
+/* 고대비모드 */
+:global(body.contrast-on) .modal {
+  background-color: var(--ct-bg);
+  border: 1px solid var(--ct-border);
+}
+:global(body.contrast-on) .icon .warningIcon {
+  color: var(--ct-red);
+}
+
+:global(body.contrast-on) .modal .footer .totalLabel,
+:global(body.contrast-on) .icon .successIcon {
+  color: var(--ct-blue);
+}
+:global(body.contrast-on) .modal .title {
+  color: var(--ct-txt);
+}
+
+:global(body.contrast-on) .modal .footer .totalLabel,
+:global(body.contrast-on) .modal .subtitle,
+:global(body.contrast-on) .modal .subInfo {
+  color: var(--ct-txt2);
+}
+:global(body.contrast-on) .modal .footer {
+  background-color: var(--ct-bg);
+}
+:global(body.contrast-on) .modal .footer .cancelBtn {
+  background-color: var(--ct-txt2);
+  color: var(--ct-bg);
+}
+:global(body.contrast-on) .modal .footer .nextBtn {
+  background-color: var(--ct-blue);
+  color: var(--ct-bg);
+}
+:global(body.contrast-on) .overlay.down .cartList {
+  background-color: var(--ct-bg);
+}

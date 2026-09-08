@@ -1,0 +1,479 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: #00000099;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000; /* CartModal보다 위 */
+}
+
+.modal {
+  width: 80%;
+  height: 67vh;
+  background: var(--white);
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 30px;
+}
+
+/* 헤더 */
+.header {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.title {
+  margin: 0 0 0 0;
+  font-size: 50px;
+  color: var(--black-font);
+  font-weight: 700;
+  text-align: center;
+}
+
+/* 결제금액 */
+.totalBox {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.totalLabel {
+  flex: 0 0 auto;
+  color: var(--gray-font);
+  font-weight: 500;
+  font-size: 30px;
+}
+.totalValue {
+  font-size: 56px;
+  font-weight: 700;
+  color: var(--blue-font);
+}
+.unit {
+  margin-left: 4px;
+  font-size: 56px;
+  font-weight: 700;
+  color: var(--blue-font);
+}
+
+
+/* 본문 */
+.content {
+  flex: 1 1 auto;
+  min-height: 0;
+  /* padding: 20px 30px 10px 30px; */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 입력 행 */
+.inputRow {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 0px;
+}
+
+.inputBox {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  width: 100%;
+  border: 1px solid var(--border-gray);
+  border-radius: 16px;
+  padding: 30px 130px 30px 24px;
+  font-size: 40px;
+  font-weight: 500;
+
+  text-align: center;
+}
+
+.input::placeholder {
+  font-size: 35px; /* placeholder 글자 크기만 줄임 */
+  color: var(--placeholder-font); /* 필요 시 색상도 변경 가능 */
+}
+
+.monthBadge {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 58px;
+  padding: 0 18px;
+  border-radius: 5px;
+  background: var(--black);
+  color: var(--white-font);
+  font-size: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 개월 수 선택 영역 */
+.selectSection {
+  display: grid;
+  grid-template-columns: 1fr 2.5fr;
+  gap: 20px;
+}
+.presetbtnBox {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+/* 프리셋 버튼 */
+.presetRow {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  /* align-items: center; */
+  justify-content: flex-start;
+
+  width: 100%;
+}
+.presetRow > .inputRow {
+  display: none;
+}
+.presetBtn {
+  height: 100px;
+  border-radius: 14px;
+  border: none;
+  background: var(--background-gray);
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 100%;
+  color: var(--light-black-font);
+}
+.presetBtn:active {
+  opacity: 0.8;
+}
+.selected {
+  background: var(--mize-blue);
+  color: var(--white-font);
+}
+
+/* 키패드 (3 x 4) */
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+.key {
+  height: 140px;
+  border-radius: 10px;
+  border: 1px solid var(--border-gray);
+  background: var(--white);
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 100%;
+  color: var(--black-font);
+
+  /* &:active {
+    opacity: 0.8;
+    background: var(--light-gray);
+  } */
+}
+.key:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.keyReset,
+.keyBack {
+  font-size: 50px;
+  color: var(--black-font);
+}
+.resetIcon {
+  width: 50px;
+  height: 50px;
+}
+
+/* 하단 버튼 */
+.footer {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  /* padding: 16px 24px; */
+  background: #fff;
+  gap: 16px;
+}
+.footer .totalBox {
+  display: none;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  padding: 10px 10px;
+}
+.prevBtn,
+.payBtn {
+  height: 130px;
+  border-radius: 20px;
+  font-size: 50px;
+  font-weight: 700;
+  border: 0;
+  cursor: pointer;
+  /* 클릭 시 효과 제거 */
+  -webkit-tap-highlight-color: transparent;
+}
+
+.prevBtn:active,
+.payBtn:active {
+  opacity: 0.8;
+}
+
+.prevBtn {
+  background: var(--dark-gray);
+  color: var(--white-font);
+}
+.payBtn {
+  background: var(--mize-blue);
+  color: var(--white-font);
+}
+.payBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* 제한 초과 경고 */
+.warnMsg {
+  height: 0px; /* 항상 고정된 높이 확보 */
+  font-size: 25px;
+  text-align: center;
+  color: transparent; /* 기본은 글자 안 보이게 */
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.warnMsg.visible {
+  min-height: 30px;
+  color: var(--red); /* 초과일 때만 빨간색 노출 */
+}
+
+/* 낮은화면 */
+.overlay.down {
+  height: 720px;
+  position: fixed;
+  top: calc(100% - 720px);
+}
+.overlay.down .modal {
+  max-height: 600px;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 40px;
+}
+.overlay.down .header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+}
+.overlay.down .title {
+  font-size: 34px;
+}
+.overlay.down .subtitle {
+  padding: 0;
+  margin: 0;
+  font-size: 24px;
+}
+.overlay.down .selectSection {
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.overlay.down .presetbtnBox {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.overlay.down .presetbtnBox button {
+  width: calc(50% - 8px);
+  font-size: 28px;
+  height: 88px;
+}
+.overlay.down .presetRow > .inputRow {
+  display: block;
+}
+.overlay.down .presetRow > .inputRow input {
+  font-size: 24px;
+  padding: 20px 100px 20px 24px;
+}
+.overlay.down .presetRow > .inputRow input::placeholder {
+  font-size: 24px;
+}
+.overlay.down .presetRow > .inputRow .monthBadge {
+  font-size: 16px;
+  height: 40px;
+}
+
+.overlay.down .presetRow .warnMsg {
+  font-size: 20px;
+  min-height: 0px;
+  margin: 12px 0;
+}
+
+.overlay.down .keypadBox > .inputRow {
+  display: none;
+}
+.overlay.down .keypad {
+  gap: 12px;
+}
+.overlay.down .key {
+  height: 66px;
+  border: none;
+  font-size: 40px;
+}
+
+.overlay.down .key .resetIcon,
+.overlay.down .key img {
+  width: 40px;
+  height: 40px;
+}
+.overlay.down .content .totalBox {
+  display: none;
+}
+.overlay.down .subInfo,
+.overlay.down .subInfo .em {
+  font-size: 28px;
+}
+.overlay.down .cartList {
+  background-color: var(--background-gray);
+  border-radius: 15px;
+  padding: 24px;
+}
+.overlay.down .grid {
+  display: flex;
+  gap: 12px
+}
+.overlay.down .grid button {
+  flex: 1;
+  height: 280px;
+}
+.overlay.down .thumb {
+  width: 120px;
+  height: 120px;
+}
+.overlay.down .grid img {
+  width: 120px;
+  height: 120px;
+}
+
+.overlay.down .grid .label {
+  font-size: 28px;
+} 
+
+.overlay.down .footer {
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+.overlay.down .footer .totalBox {
+  display: flex !important;
+  padding: 15px;
+  margin-bottom: 0;
+  justify-content: flex-start;
+  gap: 12px;
+}
+.overlay.down .footer .totalBox span {
+  font-size: 28px;
+}
+.overlay.down .footer button {
+  font-size: 34px !important;
+  height: 88px !important;
+  width: 180px !important;
+}
+.overlay.down .footer .actions {
+  display: flex;
+}
+
+/* 고대비모드 */
+:global(body.contrast-on) .modal,
+:global(body.contrast-on) .modal .grid .methodCard {
+  background-color: var(--ct-bg);
+  border: 1px solid var(--ct-border);
+}
+:global(body.contrast-on) .keypad button,
+:global(body.contrast-on) .inputBox .input {
+  background-color: var(--ct-bg);
+  border: 1px solid var(--ct-border);
+  color: var(--ct-txt);
+}
+:global(body.contrast-on) .monthBadge {
+  background-color: var(--ct-txt);
+  color: var(--ct-bg);
+}
+
+:global(body.contrast-on) .keypad button img {
+  filter: brightness(5000%);
+}
+
+:global(body.contrast-on) .modal .grid .methodCard:not(:first-child) img {
+  filter: invert(100%);
+}
+:global(body.contrast-on) .icon .warningIcon {
+  color: var(--ct-red);
+}
+:global(body.contrast-on) .modal .methodCard.selected {
+  border: 1px solid var(--ct-blue);
+}
+:global(body.contrast-on) .modal .footer .totalLabel,
+:global(body.contrast-on) .icon .successIcon {
+  color: var(--ct-blue);
+}
+:global(body.contrast-on) .modal .title,
+:global(body.contrast-on) .modal .methodCard .label {
+  color: var(--ct-txt);
+}
+
+:global(body.contrast-on) .modal .totalLabel,
+:global(body.contrast-on) .modal .subtitle,
+:global(body.contrast-on) .modal .subInfo {
+  color: var(--ct-txt2);
+}
+:global(body.contrast-on) .modal .footer {
+  background-color: var(--ct-bg);
+}
+:global(body.contrast-on) .modal .footer .cancelBtn,
+:global(body.contrast-on) .modal .footer .prevBtn {
+  background-color: var(--ct-txt2);
+  color: var(--ct-bg);
+}
+:global(body.contrast-on) .modal .footer .nextBtn,
+:global(body.contrast-on) .modal .footer .payBtn {
+  background-color: var(--ct-blue);
+  color: var(--ct-bg);
+}
+:global(body.contrast-on) .overlay.down .cartList {
+  background-color: var(--ct-bg);
+}
+
+:global(body.contrast-on) .presetBtn {
+  background-color: var(--ct-txt3);
+  color: var(--ct-txt);
+} 
+:global(body.contrast-on) .presetBtn.selected {
+  background-color: var(--ct-blue);
+  color: var(--ct-bg);
+}

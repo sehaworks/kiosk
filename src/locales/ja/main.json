@@ -1,0 +1,11 @@
+{
+  "start_btn": "チケット購入",
+  "top_title": "チルガプ湖の上を歩く特別な瞬間、",
+  "main_title": "チルガプタワーへ\nようこそ",
+  "sub_title": "ご希望のサービスを選択してください",
+  "group_notice_modal": {
+    "title": "団体案内",
+    "content": "団体({{groupSize}}名以上)は無料アトラクションセンターでチケットを購入してください",
+    "ok_button": "確認"
+  }
+}

@@ -1,0 +1,130 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--overlay-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 11000;
+
+  touch-action: none; /* 더블탭/핑치로 인한 추가 이벤트 방지 */
+  user-select: none; /* 텍스트 선택 제스처 방지 */
+}
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  height: fit-content;
+  max-width: 900px;
+  border-radius: 40px;
+  background: var(--white);
+  padding: 140px 30px 30px 30px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+
+.icon {
+  font-size: 180px;
+  color: var(--gray-font);
+  margin-bottom: 50px;
+}
+.warningIcon {
+  color: var(--red);
+}
+.header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+.title {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 140%;
+  margin: 0;
+
+  color: var(--black-font);
+}
+.msgContainer {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 160%;
+  color: var(--gray-font);
+  margin-top: 20px;
+  text-align: center;
+  white-space: pre-line;
+}
+.msg {
+  font-size: 30px;
+  color: var(--black-font);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* 버튼 */
+.footer {
+  width: 100%;
+  height: 130px;
+  border-radius: 20px;
+  font-size: 50px;
+  font-weight: 700;
+  border: 0;
+  cursor: pointer;
+  /* 클릭 시 효과 제거 */
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+/* 낮은화면 */
+.overlay.down {
+  height: 720px;
+  position: fixed;
+  top: calc(100% - 720px);
+}
+.overlay.down .modal {
+  height: 490px;
+  max-height: 600px;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 40px;
+}
+.overlay.down .icon {
+  width: 120px;
+  height: 120px;
+  font-size: 120px;
+  padding: 0;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.overlay.down .header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 0;
+  flex: 1;
+}
+.overlay.down .title {
+  font-size: 34px;
+}
+.overlay.down .msgContainer {
+  margin-top: 00px;
+}
+.overlay.down .msg {
+  padding: 0;
+  margin: 0;
+  font-size: 24px;
+}
+
+.overlay.down .footer {
+  height: auto;
+}
+.overlay.down .footer > button {
+  font-size: 34px !important;
+  height: 88px !important;
+}

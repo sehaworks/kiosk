@@ -1,0 +1,88 @@
+.customBtn {
+  position: relative;
+  flex: 1 1 auto;
+  width: auto;
+  min-width: 0;
+
+  height: 130px;
+
+  border: 0;
+  outline: 0;
+  border-radius: 20px;
+  background: var(--mize-blue);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  /* 기본 포커스 제거 */
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: opacity 0.2s ease; /* 부드러운 효과 */
+}
+
+.customBtn:focus {
+  outline: none; /* role="button" 때문에 생기는 포커스 제거 */
+}
+
+/* 누르는 동안 */
+.customBtn:active {
+  opacity: 0.7;
+}
+
+/* 손 뗀 직후 150ms 동안 */
+.clicked {
+  opacity: 0.7;
+}
+
+/* 비활성화 상태 */
+.disabled {
+  opacity: 0.5;
+  pointer-events: none; /* 아예 클릭 자체를 막음 */
+  cursor: not-allowed;
+}
+
+.customBtnText {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 1;
+  color: var(--white);
+}
+
+.ok {
+  background: var(--mize-blue);
+}
+
+.cancel {
+  background: var(--dark-gray);
+}
+
+.okText {
+  color: var(--white);
+}
+
+.cancelText {
+  color: var(--white-font);
+}
+
+/* 고대비 */
+:global(body.contrast-on) .customBtn {
+  background-color: var(--ct-blue);
+}
+:global(body.contrast-on) .customBtn span {
+  color: var(--ct-bg);
+}
+:global(body.contrast-on) .customBtn.cancel {
+  background-color: var(--ct-txt2);
+}
+:global(body.contrast-on) .customBtn.cancel span {
+  color: var(--ct-bg);
+}
+:global(body.contrast-on) .customBtn:disabled,
+:global(body.contrast-on) .customBtn.disabled {
+  background-color: var(--ct-bg2);
+}
+:global(body.contrast-on) .customBtn:disabled span,
+:global(body.contrast-on) .customBtn.disabled span {
+  color: var(--ct-txt3);
+}

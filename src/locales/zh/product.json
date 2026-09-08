@@ -1,0 +1,97 @@
+{
+  "title": "买票",
+  "go_to_main": "返回主页",
+  "price_unit": "₩",
+  "sold_out": "售罄",
+  "payment_quantity": "支付数量",
+  "total_payment_amount": "总支付金额",
+  "payment_button": "支付",
+  "delete_all": "全部删除",
+  "error_message": "无法加载产品。",
+  "loading_message": "正在加载产品...",
+  "no_products": "该类别没有产品。",
+  "cart_modal": {
+    "title": "请确认您的选择",
+    "cancle": "取消",
+    "next": "下一步",
+    "empty": "请选择商品。"
+  },
+  "payment_method_modal": {
+    "title": "请选择支付方式",
+    "prev": "上一步",
+    "pay": "支付",
+    "credit_card": "信用卡",
+    "samsung_pay": "Samsung Pay",
+    "apple_pay": "Apple Pay",
+    "easy_pay": "移动支付",
+    "kakao_pay": "Kakao Pay",
+    "naver_pay": "Naver Pay",
+    "zero_pay": "Zero Pay",
+    "mobile_payment": "移动支付"
+  },
+
+  "installment_modal": {
+    "title": "请选择分期付款月数",
+    "subtitle": "结算金额",
+    "price": "元",
+    "placeholder": "输入分期付款期数",
+    "month": "个月",
+    "none": "一次付清",
+    "3": "3个月",
+    "6": "6个月",
+    "12": "12个月",
+    "prev": "上一步",
+    "pay": "支付",
+    "limit_msg": "最多分期付款月数24个月"
+  },
+
+  "payment_guide_modal": {
+    "cancel": "关闭",
+    "credit_card": {
+      "title": "请插入信用卡",
+      "subtitle": "请勿取出卡片，直到支付完成"
+    },
+    "samsung_pay": {
+      "title": "请将 Samsung Pay 靠近终端设备",
+      "subtitle": "请将手机靠近终端"
+    },
+    "apple_pay": {
+      "title": "请将 Apple Pay 靠近终端设备",
+      "subtitle": "请将手机靠近终端"
+    },
+    "easy_pay": {
+      "title": "请将 移动支付 条码对准扫描器",
+      "subtitle": "请将条码靠近扫码器"
+    }
+  },
+  "pay_complete_modal": {
+    "title": "支付完成",
+    "subtitle": "请取出卡片\n稍后将进入下一画面"
+  },
+  "ticket_method_modal": {
+    "title": "您想使用移动票吗？",
+    "subtitle": "无需纸质票，可直接使用移动票入场",
+    "paper": "接收纸质票",
+    "mobile": "接收移动票"
+  },
+  "paper_ticket": {
+    "printing": {
+      "title": "正在打印票",
+      "subtitle": "请稍候，直到打印完成"
+    },
+    "done": {
+      "title": "票发行完成",
+      "subtitle": {
+        "prefix": "请取走打印出的票和收据",
+        "suffix": "秒后将返回首页"
+      }
+    }
+  },
+  "info_modal": {
+    "title": "付款失败",
+    "button": "再次尝试付款"
+  },
+  "common": {
+    "confirm": "确认"
+  }
+}

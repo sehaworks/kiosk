@@ -1,0 +1,133 @@
+.line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 50px;
+  border: 1px solid var(--border-gray);
+  border-radius: 10px;
+  width: 100%;
+  height: 150px;
+  margin-bottom: 15px;
+}
+.thumb {
+  width: 90px;
+  height: 90px;
+  overflow: hidden;
+  margin-right: 20px;
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+}
+.left > div {
+  width: 300px;
+  white-space: nowrap;        /* 한 줄로 고정 */
+  overflow: hidden;           /* 넘치는 텍스트 숨김 */
+  text-overflow: ellipsis;    /* 말줄임표 */
+}
+
+.name {
+  font-size: 32px;
+  color: var(--black-font);
+  font-weight: 500;
+  line-height: 40px;
+}
+
+/* 수량 조절 버튼 */
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  width: 50%;
+  flex-direction: row;
+}
+
+.circleBtn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--black);
+  cursor: pointer;
+  font-size: 35px;
+  font-weight: 400;
+  text-align: center;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.circleBtn:disabled {
+  opacity: 0.4;
+  cursor: default;
+  background: #f5f5f5;
+  color: var(--gray-font);
+}
+.qty {
+  font-size: 32px;
+  font-weight: 600;
+  min-width: 24px;
+  text-align: center;
+  color: var(--black-font);
+}
+
+/* 단가 + 삭제 버튼 */
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 18px;
+}
+
+.removeBtn {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  color: var(--red);
+  display: inline-flex;
+  padding: 6px;
+  font-size: 30px;
+}
+
+.price {
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--black-font);
+}
+
+.priceBox {
+  width: 200px;
+  /* width: 220px;  */
+  /* right의 폭과 동일 → 줄바꿈/흔들림 방지 */
+  text-align: right;
+  white-space: nowrap; /* 줄바꿈 금지 */
+  font-variant-numeric: tabular-nums; /* 숫자 자릿수 폭 균등 */
+  /* Pretendard도 지원됨. 혹시 미적용이면 아래 한 줄 추가
+     font-feature-settings: 'tnum' 1, 'lnum' 1; */
+}
+
+.priceValue {
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--black-font);
+}
+
+.priceUnit {
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--black-font);
+  margin-left: 4px; /* 숫자와 '원' 사이 약간의 간격 */
+}
+
+/* 고대비모드 */
+:global(body.contrast-on) .name,
+:global(body.contrast-on) .qty {
+  color: var(--ct-txt);
+}
+:global(body.contrast-on) .priceBox span {
+  color: var(--ct-blue);
+}

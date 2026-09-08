@@ -1,0 +1,120 @@
+.barrierFreeBtnBox {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--black);
+    padding: 20px 30px;
+    width: 100vw;
+    z-index: 99999;
+}
+
+.bfBtnBox {
+    display: flex;
+    align-items: center;
+    /* gap: 10px; */
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.bfBtn {
+    width: 300px;
+    height: 100px;
+    font-size: 34px;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    background: #FFFFFF;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(197, 197, 197, 1) 100%);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.bfBtn:active {
+    transform: scale(0.98);
+}
+
+.bfBtn.off span {
+    color: #b5b5b5;
+}
+
+.bfBtn.on span {
+    color: var(--mize-blue);
+}
+
+/* 낮은화면 */
+.barrierFreeBtnBox.down {
+    position: fixed;
+    bottom: 720px;
+}
+
+/* ─────────────────────────────────────
+   음량 조절 그룹
+   ───────────────────────────────────── */
+.volumeGroup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(197, 197, 197, 1) 100%);
+    padding: 15px 25px;
+    border-radius: 20px;
+    min-width: 200px;
+}
+
+.volumeLabel {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+}
+
+.volumeControl {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.volumeBtn {
+    width: 50px;
+    height: 50px;
+    font-size: 32px;
+    font-weight: 700;
+    border: none;
+    border-radius: 50%;
+    background: #555;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.volumeBtn:hover:not(:disabled) {
+    background: #777;
+}
+
+.volumeBtn:active:not(:disabled) {
+    transform: scale(0.95);
+}
+
+.volumeBtn:disabled {
+    background: #ccc;
+    color: #999;
+    cursor: not-allowed;
+}
+
+.volumeLevel {
+    font-size: 26px;
+    font-weight: 600;
+    color: #333;
+    min-width: 80px;
+    text-align: center;
+}
+
+
+/* 고대비 */
+:global(body.contrast-on) .barrierFreeBtnBox {
+    background-color: var(--ct-bg);
+    border-top: 1px solid var(--ct-txt3);
+    border-bottom: 1px solid var(--ct-txt3);
+}

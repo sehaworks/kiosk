@@ -1,0 +1,99 @@
+{
+  "title": "Buying tickets",
+  "go_to_main": "Go to main",
+  "price_unit": "₩",
+  "sold_out": "Sold out",
+  "payment_quantity": "Payment quantity",
+  "total_payment_amount": "Total amount",
+  "payment_button": "Payment",
+  "delete_all": "Delete all",
+  "error_message": "Failed to load products.",
+  "loading_message": "Loading products...",
+  "no_products": "No products in this category.",
+  "cart_modal": {
+    "title": "Please Confirm Your Selection",
+    "cancle": "Cancel",
+    "next": "Next",
+    "empty": "Please select a product."
+  },
+  "payment_method_modal": {
+    "title": "Please Select a Payment Method",
+    "prev": "Previous",
+    "pay": "Pay",
+    "credit_card": "Credit Card",
+    "samsung_pay": "Samsung Pay",
+    "apple_pay": "Apple Pay",
+    "easy_pay": "Mobile Pay",
+    "kakao_pay": "Kakao Pay",
+    "naver_pay": "Naver Pay",
+    "zero_pay": "Zero Pay",
+    "mobile_payment": "Mobile Pay"
+  },
+
+  "installment_modal": {
+    "title": "Please Select the Installment Period",
+    "subtitle": "Payment Amount",
+    "price": "won",
+    "placeholder": "Enter the installment period",
+    "month": "Month",
+    "none": "One-time Payment",
+    "3": "3 Months",
+    "6": "6 Months",
+    "12": "12 Months",
+    "prev": "Previous",
+    "pay": "Pay",
+    "limit_msg": "The maximum installment period is 24 months"
+  },
+
+  "payment_guide_modal": {
+    "cancel": "Cancel",
+    "credit_card": {
+      "title": "Please Insert Your Credit Card",
+      "subtitle": "Do not remove the card until the payment is complete"
+    },
+    "samsung_pay": {
+      "title": "Please tag Samsung Pay to the terminal",
+      "subtitle": "Hold your phone close to the terminal"
+    },
+    "apple_pay": {
+      "title": "Please tag Apple Pay to the terminal",
+      "subtitle": "Hold your phone close to the terminal"
+    },
+    "easy_pay": {
+      "title": "Please scan the mobile payment barcode",
+      "subtitle": "Hold the barcode close to the scanner."
+    }
+  },
+
+  "pay_complete_modal": {
+    "title": "Payment Complete",
+    "subtitle": "Please Remove Your Card \nThe next screen will appear shortly"
+  },
+  "ticket_method_modal": {
+    "title": "Would you like to receive a mobile ticket?",
+    "subtitle": "You can enter directly with a mobile ticket, no paper needed",
+    "paper": "Receive Paper Ticket",
+    "mobile": "Receive Mobile Ticket"
+  },
+  "paper_ticket": {
+    "printing": {
+      "title": "Printing the ticket",
+      "subtitle": "Please wait a moment until the printing is complete"
+    },
+    "done": {
+      "title": "Ticket Issuance Complete",
+      "subtitle": {
+        "prefix": "Please take the printed ticket and receipt",
+        "suffix": "seconds later will be returned to the first screen"
+      }
+    }
+  },
+
+  "info_modal": {
+    "title": "Payment Failed",
+    "button": "Retry Payment"
+  },
+  "common": {
+    "confirm": "Confirm"
+  }
+}

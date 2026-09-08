@@ -1,0 +1,11 @@
+{
+  "start_btn": "Buying tickets",
+  "top_title": "A special moment walking over Chilgap Lake,",
+  "main_title": "Welcome to \nChilgap Tower",
+  "sub_title": "Select a Service",
+  "group_notice_modal": {
+    "title": "Group Notice",
+    "content": "Group ({{groupSize}} or more) please purchase tickets at the manned ticket office",
+    "ok_button": "Confirm"
+  }
+}

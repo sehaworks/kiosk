@@ -1,0 +1,97 @@
+{
+  "title": "チケット購入",
+  "go_to_main": "最初に戻る",
+  "price_unit": "₩",
+  "sold_out": "品切れ",
+  "payment_quantity": "数量",
+  "total_payment_amount": "合計",
+  "payment_button": "支払い",
+  "delete_all": "すべて削除",
+  "error_message": "商品を読み込めませんでした。",
+  "loading_message": "商品を読み込んでいます...",
+  "no_products": "このカテゴリーの商品はありません。",
+  "cart_modal": {
+    "title": "選択内容を確認してください",
+    "cancle": "キャンセル",
+    "next": "次へ",
+    "empty": "商品をお選びください。"
+  },
+  "payment_method_modal": {
+    "title": "お支払い方法を選択してください",
+    "prev": "戻る",
+    "pay": "支払い",
+    "credit_card": "クレジットカード",
+    "samsung_pay": "Samsung Pay",
+    "apple_pay": "Apple Pay",
+    "easy_pay": "モバイルペイ",
+    "kakao_pay": "Kakao Pay",
+    "naver_pay": "Naver Pay",
+    "zero_pay": "Zero Pay",
+    "mobile_payment": "モバイルペイ"
+  },
+
+  "installment_modal": {
+    "title": "お支払い方法を選択してください",
+    "subtitle": "決済金額",
+    "price": "元",
+    "placeholder": "分割期間を入力します",
+    "month": "月",
+    "none": "One-time Payment",
+    "3": "3ヶ月",
+    "6": "6ヶ月",
+    "12": "12ヶ月",
+    "prev": "戻る",
+    "pay": "支払い",
+    "limit_msg": "最大分割払いの月数は24ヶ月です"
+  },
+
+  "payment_guide_modal": {
+    "cancel": "キャンセル",
+    "credit_card": {
+      "title": "クレジットカードを挿入してください",
+      "subtitle": "決済が完了するまでカードを抜かないでください"
+    },
+    "samsung_pay": {
+      "title": "Samsung Pay を端末にかざしてください",
+      "subtitle": "携帯電話を端末に近づけてください"
+    },
+    "apple_pay": {
+      "title": "Apple Pay を端末にかざしてください",
+      "subtitle": "携帯電話を端末に近づけてください"
+    },
+    "easy_pay": {
+      "title": "バーコードをスキャナーに認識させてください",
+      "subtitle": "バーコードをリーダーに近づけてください"
+    }
+  },
+  "pay_complete_modal": {
+    "title": "決済が完了しました",
+    "subtitle": "カードを取り出してください\nまもなく次の画面に進みます"
+  },
+  "ticket_method_modal": {
+    "title": "モバイルチケットで受け取りますか？",
+    "subtitle": "紙のチケットなしで、モバイルでそのまま入場できます",
+    "paper": "紙チケットを受け取る",
+    "mobile": "モバイルチケットを受け取る"
+  },
+  "paper_ticket": {
+    "printing": {
+      "title": "チケットを印刷しています",
+      "subtitle": "印刷が完了するまでお待ちください"
+    },
+    "done": {
+      "title": "チケット発行が完了しました",
+      "subtitle": {
+        "prefix": "印刷されたチケットと領収書を受け取ってください",
+        "suffix": "秒後、最初の画面に移動します"
+      }
+    }
+  },
+  "info_modal": {
+    "title": "決済失敗",
+    "button": "決済再試行"
+  },
+  "common": {
+    "confirm": "確認"
+  }
+}

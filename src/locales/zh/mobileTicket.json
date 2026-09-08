@@ -1,0 +1,31 @@
+{
+  "personal_information_consent": {
+    "title": "个人信息的收集及使用同意（必填）",
+    "subtitle": "1. 收集项目:手机号码\n2. 收集目的:发送kakao通知\n3. 持有时间:3年\n可能会拒绝收集和利用个人信息。 但是,如果拒绝同意,将限制使用Kakao通知系统。",
+    "agree_button": "同意",
+    "back_button": "返回"
+  },
+  "mobile_ticket": {
+    "header": "输入手机号码",
+    "title": "请输入手机号码接收移动票",
+    "subtitle1": "未输入手机号码的门票将作为纸质门票发行",
+    "subtitle2": "(重复号码无法输入)",
+    "placeholder": "输入手机号(仅数字，不含“-”)",
+    "button": "输入完成",
+    "error_message": "* 无效的手机号码",
+    "duplicate_message": "* 重复号码无法输入"
+  },
+  "mobile_ticket_confirm_modal": {
+    "title": "是否将移动票发送\n到输入的手机号？",
+    "subtitle": "未输入手机号码的门票将作为纸质门票发行",
+    "empty": "未输入",
+    "send_button": "发送",
+    "cancel_button": "重新输入"
+  },
+  "mobile_ticket_printing_modal": {
+    "title": "移动票发送完成",
+    "subtitle": "请确认通知短信中的二维码",
+    "go_back": "秒后将返回首页",
+    "button": "确认"
+  }
+}

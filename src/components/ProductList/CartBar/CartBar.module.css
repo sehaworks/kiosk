@@ -1,0 +1,240 @@
+.bar {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr; /* 좌(목록) : 우(합계) */
+  height: 446px;
+  border-top: 1px solid var(--border-gray);
+  background: var(--white);
+}
+
+/* ===== 좌측: 장바구니 목록 ===== */
+.left {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  min-width: 0;
+  border-right: 1px solid var(--border-gray);
+}
+
+.leftHeader {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.count {
+  font-size: 30px;
+  color: var(--gray-font);
+  font-weight: 500;
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.em {
+  color: var(--blue-font);
+  font-weight: 700;
+  font-size: 36px;
+}
+
+.clearBtn {
+  appearance: none;
+  border: 0;
+  background: rgba(255, 66, 49, 0.1);
+  color: #ff4231;
+  font-weight: 700;
+  padding: 13px 18px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  font-size: 25px;
+  /* 기본 포커스 제거 */
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  touch-action: manipulation;
+}
+.clearBtn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.list {
+  /* flex: 1 1 auto; */
+  /* min-height: 0; */
+  flex: 1 1 0;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  overflow-y: auto;
+  padding-right: 8px;
+  /* height: 100%; */
+  display: flex;
+  flex-direction: column;
+}
+
+.list > * {
+  flex-shrink: 0;
+}
+
+.list::-webkit-scrollbar {
+  /* display: none; 웹킷 브라우저에서 스크롤바 숨기기 */
+}
+.list {
+  -ms-overflow-style: none; /* IE와 Edge에서 스크롤바 숨기기 */
+  scrollbar-width: none; /* Firefox에서 스크롤바 숨기기 */
+}
+
+.empty {
+  height: 100%;
+  display: grid;
+  place-items: center;
+  color: var(--gray-font);
+  font-size: 30px;
+  font-weight: 500;
+}
+
+/* ===== 우측: 결제 요약 ===== */
+.right {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  gap: 18px;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.summaryTitle {
+  color: var(--gray-font);
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.total {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--blue-font);
+  font-weight: 700;
+  /* height: 10rem; */
+}
+.total strong {
+  font-size: 56px;
+}
+.unit {
+  font-size: 40px;
+}
+
+.payBtn {
+  width: 80%;
+  height: 76px;
+  border: 0;
+  border-radius: 16px;
+  background: var(--dark-blue);
+  color: #fff;
+  font-size: 32px;
+  font-weight: 800;
+  cursor: pointer;
+}
+.payBtn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+/* 스크롤 화살표 */
+.arrowBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(52, 64, 135, 0.4);
+  backdrop-filter: blur(10px);
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.leftArrow {
+  left: 10px;
+}
+
+.rightArrow {
+  right: 10px;
+}
+
+.left {
+  position: relative; /* 화살표 위치 기준 */
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  min-width: 0;
+  border-right: 1px solid var(--border-gray);
+}
+
+/* 낮은화면 */
+.bar.down {
+  width: 100vw;
+  height: 132px;
+  display: flex;
+  justify-content: space-between;
+  padding: 22px 30px;
+}
+.bar.down .left .leftHeader > button, 
+.bar.down .left .list,
+.bar.down .right .summaryTitle {
+  display: none;
+}
+
+.bar.down .left,
+.bar.down .right {
+  display: flex;
+  flex-direction: row;  
+  height: 100%;
+  align-items: center;
+  border: none;
+  padding: 8px 15px;
+}
+.bar.down .left .leftHeader {
+  margin-bottom: 0px;
+}
+.bar.down .right button {
+  width: 300px !important;
+  height: 88px !important;
+  font-size: 34px !important;
+}
+
+/* 고대비 */
+:global(body.contrast-on) .bar {
+  background-color: var(--ct-bg);
+  border-top: none;
+}
+
+:global(body.contrast-on) .count {
+  color: var(--ct-txt);
+}
+:global(body.contrast-on) .count .em {
+  color: var(--ct-blue);
+}
+:global(body.contrast-on) .clearBtn {
+  background-color: var(--ct-red);
+  color: var(--ct-txt);
+}
+:global(body.contrast-on) .left {
+  border-right: 1px solid var(--ct-txt3);
+}
+:global(body.contrast-on) .summaryTitle {
+  color: var(--ct-txt);
+}
+:global(body.contrast-on) .total {
+  color: var(--ct-blue);
+}

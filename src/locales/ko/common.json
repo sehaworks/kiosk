@@ -1,0 +1,15 @@
+{
+  "go_to_main": "처음으로",
+  "close": "닫기",
+
+  "exceed_limit": {
+    "title": "구매 수량 초과",
+    "content1": "해당 상품은 최대 {{limit}}개까지 구매 가능합니다.",
+    "content2": "유인매표소에서 진행해주세요."
+  },
+  "inactivity_countdown": {
+    "title": "자동 종료 안내",
+    "message": "일정 시간 동안 사용하지 않아\n자동으로 처음 화면으로 돌아갑니다",
+    "countdown_text": "초 후 처음 화면으로 이동"
+  }
+}

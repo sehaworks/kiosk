@@ -1,0 +1,16 @@
+{
+  "go_to_main": "Go to main",
+  "close": "Close",
+
+  "exceed_limit": {
+    "title": "Staff Assistance Required",
+    "content1": "The maximum purchase limit at the kiosk is {{limit}}.",
+    "content2": "For group purchases, please proceed at the information desk.",
+    "content3": "We apologize for the inconvenience."
+  },
+  "inactivity_countdown": {
+    "title": "Auto Exit Notice",
+    "message": "Due to inactivity for a certain period, the system will automatically return to the main screen.",
+    "countdown_text": "seconds until return to main screen"
+  }
+}

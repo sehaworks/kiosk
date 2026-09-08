@@ -1,111 +1,103 @@
+/* @import './styles/fonts.css'; */
+
 :root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+  /* 키오스크 기본 패딩/라운드 값 */
+  --gap: 30px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
+  /* 색상 */
+  --black: #222222;
+  --white: #ffffff;
+  --mize-blue: #0692e7;
+  --dark-blue: #344087;
+  --blue: #37a7eb;
+  --light-blue: #a8e0f9;
+  --light-gray: #eeeeee;
+  --dark-gray: #B5B5B5;
+  --red: #ff4231;
+  --background-gray: #f5f5f5;
+  --overlay-gray: #00000099;
 
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
-  color-scheme: light dark;
-  color: var(--text);
-  background: var(--bg);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --white-font: #ffffff;
+  --black-font: #222222;
+  --light-black-font: #444444;
+  --blue-font: #37a7eb;
+  --gray-font: #666666;
+  --placeholder-font: #888888;
 
-  @media (max-width: 1024px) {
-    font-size: 16px;
-  }
+  --border-gray: #dddddd;
+
+  --ct-bg: #000000;
+  --ct-bg2: #151515;
+  --ct-txt: #ffffff;
+  --ct-txt2: #b5b5b5;
+  --ct-txt3: #434343;
+  --ct-border: #dddddd;
+  --ct-blue: #52bdff;
+  --ct-red: #9E1D11;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-  }
-
-  #social .button-icon {
-    filter: invert(1) brightness(2);
-  }
-}
-
-body {
-  margin: 0;
-}
-
+/* 전역 스타일 */
+body,
+html,
 #root {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  /* 스크롤바 숨기기 */
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+/* 전역 버튼 효과 */
+button:active {
+  opacity: 0.8;
+  /* background: var(--light-gray); */
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* 기본 효과 제거 */
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+* {
   box-sizing: border-box;
 }
 
-h1,
-h2 {
-  font-family: var(--heading);
-  font-weight: 500;
-  color: var(--text-h);
-}
-
-h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-  margin: 32px 0;
-  @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
+/* 뷰포트 크기 고정 */
+@media (min-width: 1080px) and (min-height: 1920px) {
+  html {
+    font-size: 16px;
+    /* 기본 폰트 크기 설정 */
   }
 }
-h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
-  margin: 0 0 8px;
-  @media (max-width: 1024px) {
-    font-size: 20px;
+
+/* 특정 해상도에 맞춘 스타일 */
+/*
+만약 1080x1920 해상도에만 엄격하게 적용하려면 아래와 같이 작성할 수 있습니다.
+하지만, 뷰포트 크기가 달라질 때를 대비하여 유연한 접근을 추천합니다.
+*/
+/*
+@media (width: 1080px) and (height: 1920px) {
+  body, html, #root {
+    width: 1080px;
+    height: 1920px;
   }
 }
-p {
-  margin: 0;
-}
-
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
-}
-
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
-}
+*/

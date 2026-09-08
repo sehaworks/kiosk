@@ -1,0 +1,11 @@
+{
+  "start_btn": "买票",
+  "top_title": "漫步在七甲湖上的特别时刻,",
+  "main_title": "欢迎来到Chilgap塔",
+  "sub_title": "请选择服务",
+  "group_notice_modal": {
+    "title": "团体通知",
+    "content": "团体（{{groupSize}}人以上）请到人工售票处购买门票",
+    "ok_button": "确认"
+  }
+}

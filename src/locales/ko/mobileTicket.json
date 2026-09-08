@@ -1,0 +1,31 @@
+{
+  "personal_information_consent": {
+    "title": "개인정보 수집 및 이용 동의 (필수)",
+    "subtitle": "1. 수집항목: 휴대폰번호 \n2. 수집목적: 카카오 알림톡 발송 \n3. 보유기간: 3년\n개인정보 수집 및 이용에 대하여 거부하실 수 있습니다. 그러나 동의 거부 시 카카오 알림톡 시스템 이용에 제한됩니다. ",
+    "agree_button": "동의",
+    "back_button": "이전"
+  },
+  "mobile_ticket": {
+    "header": "휴대폰 번호 입력",
+    "title": "모바일 티켓을 받을 휴대폰 번호를 입력해주세요",
+    "subtitle1": "번호를 입력하지 않은 입장권은 종이 티켓으로 발급됩니다",
+    "subtitle2": "(중복 번호는 입력이 불가합니다)",
+    "placeholder": "휴대폰 번호 입력(- 없이 숫자만 입력)",
+    "button": "입력 완료",
+    "error_message": "* 유효한 휴대폰 번호를 입력해주세요",
+    "duplicate_message": "* 중복 번호는 입력이 불가합니다"
+  },
+  "mobile_ticket_confirm_modal": {
+    "title": "입력하신 번호로\n모바일 티켓을 전송 할까요?",
+    "subtitle": "입력하지 않은 입장권은 종이 티켓으로 발급됩니다",
+    "empty": "입력 없음",
+    "send_button": "전송",
+    "cancel_button": "재입력"
+  },
+  "mobile_ticket_printing_modal": {
+    "title": "모바일 티켓 전송이 완료되었습니다",
+    "subtitle": "알림톡의 QR코드를 확인해주세요",
+    "go_back": "초 후에 첫 화면으로 이동합니다",
+    "button": "확인"
+  }
+}

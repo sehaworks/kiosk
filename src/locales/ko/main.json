@@ -1,0 +1,19 @@
+{
+  "start_btn": "현장 티켓 구매",
+  "top_title": "전통과 기술이 만나 과거와 현재,\n그리고 미래를 잇는 공간",
+  "main_title": "정읍 국가유산 미디어아트관\n방문을 환영합니다.",
+  "sub_title": "원하시는 서비스를 선택해주세요",
+  "contrast_btn": "고대비",
+  "screen_btn": "낮은화면",
+  "magnify_btn": "확대",
+  "group_notice_modal": {
+    "title": "단체 안내",
+    "content": "단체({{groupSize}}명 이상)은 유인 매표소에서 발권 받으시기 바랍니다",
+    "ok_button": "확인"
+  },
+
+  "discount_info_page": {
+    "yes_discount_btn": "입장료 할인 \n대상자입니다",
+    "no_discount_btn": "입장료 할인 \n대상자가 아닙니다"
+  }
+}

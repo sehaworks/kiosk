@@ -1,0 +1,104 @@
+{
+  "title": "현장 티켓 구매",
+  "go_to_main": "처음으로",
+  "ticket_unit": "장",
+  "price_unit": "원",
+  "sold_out": "품절",
+  "payment_quantity": "총 수량",
+  "total_payment_amount": "합계",
+  "payment_button": "결제하기",
+  "delete_all": "전체 삭제",
+  "error_message": "상품을 불러오지 못했습니다",
+  "loading_message": "상품을 불러오는 중 입니다",
+  "no_products": "해당 카테고리 상품이 없습니다",
+  "cart_modal": {
+    "title": "선택 내역을 확인해주세요",
+    "cancle": "취소",
+    "next": "다음",
+    "empty": "상품을 선택해주세요."
+  },
+  "payment_method_modal": {
+    "title": "결제 수단을 선택해주세요",
+    "prev": "취소",
+    "pay": "다음",
+    "credit_card": "신용카드",
+    "samsung_pay": "삼성페이",
+    "apple_pay": "애플페이",
+    "easy_pay": "간편결제",
+    "kakao_pay": "카카오페이",
+    "naver_pay": "네이버페이",
+    "zero_pay": "제로페이",
+    "mobile_payment": "간편결제"
+  },
+
+  "installment_modal": {
+    "title": "할부개월수를 선택해주세요",
+    "subtitle": "결제금액",
+    "price": "원",
+    "placeholder": "개월수 입력",
+    "month": "개월",
+    "none": "일시불",
+    "3": "3개월",
+    "6": "6개월",
+    "12": "12개월",
+    "prev": "취소",
+    "pay": "다음",
+    "limit_msg": "최대 할부개월수는 24개월입니다"
+  },
+
+  "payment_guide_modal": {
+    "cancel": "취소",
+    "paying": "결제중...",
+    "default": {
+      "title": "결제 안내",
+      "subtitle": "화면의 지시에 따라 진행해 주세요."
+    },
+    "credit_card": {
+      "title": "신용카드 결제",
+      "subtitle": "카드를 투입구에 끝까지 넣은 후\n결제가 완료될 때까지 제거하지 마세요."
+    },
+    "samsung_pay": {
+      "title": "삼성페이 결제",
+      "subtitle": "휴대폰 뒷면을 카드 리더기에 가까이 댄 후\n결제가 완료될 때까지 떼지 마세요."
+    },
+    "apple_pay": {
+      "title": "애플페이 결제",
+      "subtitle": "휴대폰 뒷면을 카드 리더기에 가까이 댄 후\n결제가 완료될 때까지 떼지 마세요."
+    },
+    "easy_pay": {
+      "title": "간편결제",
+      "subtitle": "모바일 바코드 또는 QR코드를 스캔해주세요."
+    }
+  },
+
+  "pay_complete_modal": {
+    "title": "결제가 완료되었습니다",
+    "subtitle": "카드를 제거해주세요\n잠시 후 다음 화면으로 이동됩니다"
+  },
+  "ticket_method_modal": {
+    "title": "모바일 티켓으로 받으시겠어요?",
+    "subtitle": "종이 티켓 없이 모바일로 바로 입장할 수 있습니다.",
+    "paper": "종이 티켓 받기",
+    "mobile": "모바일 티켓 받기"
+  },
+  "paper_ticket": {
+    "printing": {
+      "title": "티켓을 출력하고 있습니다",
+      "subtitle": "출력이 완료될 때까지 잠시만 기다려주세요"
+    },
+    "done": {
+      "title": "티켓 발권이 완료되었습니다",
+      "subtitle": {
+        "prefix": "출력된 티켓과 영수증을 받아가세요",
+        "suffix": "초 후 첫 화면으로 이동됩니다"
+      }
+    }
+  },
+  "info_modal": {
+    "title": "결제 실패",
+    "button": "결제 다시 시도"
+  },
+  "common": {
+    "confirm": "확인"
+  }
+}

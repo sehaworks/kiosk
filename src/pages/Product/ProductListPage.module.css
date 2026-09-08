@@ -1,0 +1,137 @@
+:root {
+  --header-height: 150px; /* 이미 사용중인 값 */
+  --tab-h: 100px; /* CategoryTabs와 동일하게 */
+  --cart-h: 500px; /* 하단 장바구니 고정 높이 */
+}
+
+.page {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--background-gray);
+  /* padding: 30px 30px; */
+  display: grid;
+  grid-template-rows: var(--header-height) 1fr var(--cart-h);
+  overflow: hidden; /* 페이지 자체는 스크롤 금지 */
+  grid-template-rows: auto 1fr auto; /* 헤더, 탭, 리스트(스크롤), 장바구니(고정) */
+}
+
+.listContainer {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+/* ===== 상품 리스트 ===== */
+.productList {
+  flex: 1;
+  width: 100%;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-top: 1px solid var(--border-gray);
+
+  position: relative;
+}
+.productList::-webkit-scrollbar {
+  width: 10px;
+}
+.productList::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 999px;
+}
+.productList::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 1080 폭 기준 3분할 */
+  gap: 30px;
+  padding: 30px;
+}
+
+/* 빈 상태/로딩/에러 문구 */
+.empty {
+  height: 100%;
+  min-height: 160px;
+  display: grid;
+  place-items: center;
+  color: var(--gray-font);
+  font-size: 30px;
+}
+
+.pager {
+  display: none !important;
+}
+
+
+/* 낮은화면 */
+.page.down {
+  height: 720px;
+  position: absolute;
+  bottom: 0;
+}
+.listContainer.down {
+  flex-direction: row;
+}
+.grid.down {
+  gap: 20px;
+  padding: 20px 30px;
+  grid-template-columns: repeat(3, 1fr); /* 1080 폭 기준 3분할 */
+  grid-template-rows: repeat(2, 1fr); /* 1080 폭 기준 3분할 */
+}
+
+
+.listContainer.down .pager {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 30px;
+}
+
+.listContainer.down .pager .arrow {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 0;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.listContainer.down .pager .arrow:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.listContainer.down .pager .dots {
+  display: flex;
+  gap: 13px;
+}
+
+.listContainer.down .pager .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  border: 0;
+  background-color: #D9D9D9;
+  cursor: pointer;
+}
+
+.listContainer.down .pager .activeDot {
+  width: 10px;
+  background: #37A7EB;
+}
+
+/* 고대비모드 */
+:global(body.contrast-on) .page {
+  background-color: var(--ct-bg2) !important;
+}
+
+:global(body.contrast-on) .page .empty {
+  color: var(--ct-txt3);
+}
+
+:global(body.contrast-on) .productList {
+  border: none;
+}

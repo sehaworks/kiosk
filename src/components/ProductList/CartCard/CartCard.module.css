@@ -1,0 +1,159 @@
+/* 장바구니 아이템 카드 */
+.item {
+  border-bottom: 1px solid var(--border-gray);
+  /* border-radius: 10px; */
+  padding: 20px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 12px;
+}
+
+
+.itemHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 12px;
+  width: 200px;
+}
+.itemName {
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--black-font);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.removeBtn {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  color: #b5b5b5;
+  display: inline-flex;
+  padding: 6px;
+  /* 기본 포커스 제거 */
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  touch-action: manipulation;
+}
+.removeBtn:hover {
+  color: var(--red);
+}
+
+.itemBody {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price {
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--black-font);
+  /* margin: 20px 0; */
+  width: 132px;
+  white-space: nowrap;
+  text-align: end;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  width: 176px;
+  flex-direction: row;
+}
+
+.circleBtn {
+  width: 48px;
+  height: 48px;
+  border-radius: 548px;
+  background: var(--black);
+  cursor: pointer;
+  font-size: 28px;
+  font-weight: 400;
+  text-align: center;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* 기본 포커스 제거 */
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  touch-action: manipulation;
+}
+.circleBtn:disabled {
+  opacity: 0.4;
+  cursor: default;
+  background: #f5f5f5;
+  color: var(--gray-font);
+}
+.qty {
+  font-size: 30px;
+  font-weight: 600;
+  min-width: 24px;
+  text-align: center;
+  color: var(--black-font);
+}
+
+/* 스크롤 화살표 */
+.arrowBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.leftArrow {
+  left: 10px;
+}
+
+.rightArrow {
+  right: 10px;
+}
+
+.left {
+  position: relative; /* 화살표 위치 기준 */
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  min-width: 0;
+  border-right: 1px solid var(--border-gray);
+}
+
+
+/* 고대비 */
+:global(body.contrast-on) .item .itemName,
+:global(body.contrast-on) .item .qty {
+  color: var(--ct-txt);
+}
+:global(body.contrast-on) .item .price {
+  color: var(--ct-blue);
+}
+:global(body.contrast-on) .circleBtn {
+  background-color: var(--ct-blue);
+  color: var(--ct-bg);
+}
+:global(body.contrast-on) .circleBtn:disabled {
+  background-color: var(--ct-txt3);
+  color: var(--ct-txt);
+  opacity: 1;
+}

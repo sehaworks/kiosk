@@ -1,0 +1,31 @@
+{
+  "personal_information_consent": {
+    "title": "Consent to Collection & Use of Personal Information (Required)",
+    "subtitle": "1. Collected item: mobile phone number \n2. Purpose of collection: Send Kakao Notification Talk \n3. Retention period: 3 years\nYou may refuse to collect and use personal information. However, if you refuse to consent, you will be limited to using the Kakao notification chat system.",
+    "agree_button": "Agree",
+    "back_button": "Back"
+  },
+  "mobile_ticket": {
+    "header": "Enter Phone Number",
+    "title": "Please enter the phone number to receive the mobile ticket",
+    "subtitle1": "Tickets without a phone number will be issued as paper tickets",
+    "subtitle2": "(Duplicate numbers cannot be entered)",
+    "placeholder": "Enter phone number(numbers only, no '-')",
+    "button": "Input Complete",
+    "error_message": "* Please enter a valid phone number",
+    "duplicate_message": "* Duplicate numbers cannot be entered"
+  },
+  "mobile_ticket_confirm_modal": {
+    "title": "Would you like to send a mobile ticket \nto the entered number?",
+    "subtitle": "Tickets without a phone number will be issued as paper tickets",
+    "empty": "No Input",
+    "send_button": "Send",
+    "cancel_button": "Re-enter"
+  },
+  "mobile_ticket_printing_modal": {
+    "title": "Mobile Ticket Sending Complete",
+    "subtitle": "Please check the QR code in the KakaoTalk",
+    "go_back": "seconds later will be returned to the first screen",
+    "button": "Confirm"
+  }
+}

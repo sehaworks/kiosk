@@ -1,0 +1,31 @@
+{
+  "personal_information_consent": {
+    "title": "個人情報の収集及び利用に関する同意（必須）",
+    "subtitle": "1.収集項目: 携帯番号\n2. 収集目的: カカオ 通知トーク 発送 \n3. 保有期間: 3年\n個人情報の収集および利用について拒否することができます。 しかし、同意拒否の場合、カカオ通知トークシステムの利用に制限されます。",
+    "agree_button": "同意",
+    "back_button": "戻る"
+  },
+  "mobile_ticket": {
+    "header": "携帯番号を入力",
+    "title": "チケットを受け取る携帯番号を入力してください",
+    "subtitle1": "電話番号を入力しないチケットは、紙のチケットとして発行されます",
+    "subtitle2": "(重複番号は入力できません)",
+    "placeholder": "携帯番号を入力(「-」なし、数字のみ)",
+    "button": "入力完了",
+    "error_message": "* 無効な電話番号",
+    "duplicate_message": "* 重複番号は入力できません"
+  },
+  "mobile_ticket_confirm_modal": {
+    "title": "入力した番号にモバイルチケットを送信しますか？",
+    "subtitle": "電話番号を入力しないチケットは、紙のチケットとして発行されます",
+    "empty": "入力無",
+    "send_button": "送信",
+    "cancel_button": "再入力"
+  },
+  "mobile_ticket_printing_modal": {
+    "title": "モバイルチケット送信が完了しました",
+    "subtitle": "お知らせトークのQRコードをご確認ください",
+    "go_back": "秒後に最初の画面に戻ります",
+    "button": "確認"
+  }
+}

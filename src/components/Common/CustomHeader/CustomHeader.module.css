@@ -1,0 +1,168 @@
+:root {
+  --header-height: 160px; /* 키오스크용 넉넉한 터치 높이 */
+  --gap: 16px;
+}
+
+/* 기존 코드 유지 + 아래만 추가 */
+
+.titleSwap {
+  position: relative;
+  height: 60px; /* 고정 높이로 레이아웃 점프 방지 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 420px; /* 문자 폭에 따른 흔들림 방지 (필요시 조정) */
+}
+
+/* 기존 .title 규칙을 재사용하되, 겹쳐 놓기 위해 absolute 배치 */
+.titleSwap .title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: none; /* 키프레임 사용 */
+  will-change: opacity, transform;
+}
+
+/* 새 타이틀: 아래에서 올라오며 페이드 인 */
+.titleIn {
+  animation: title-in 0.2s ease forwards;
+}
+/* 기존 타이틀: 위로 올라가며 페이드 아웃 */
+.titleOut {
+  animation: title-out 0.2s ease forwards;
+}
+
+@keyframes title-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 12px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+@keyframes title-out {
+  from {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, -12px);
+  }
+}
+
+.header {
+  /* position: sticky;  */
+  top: 0;
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: var(--white);
+  z-index: 100;
+
+  /* 키오스크: 임의 확대/텍스트 선택 방지 */
+  -webkit-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.left,
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100px;
+  height: 100px;
+  font-size: 60px;
+}
+.left > div,
+.right > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  width: 100px;
+  height: 100px;
+  font-size: 60px;
+}
+
+.center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.title {
+  flex: 1;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 700;
+  color: var(--black-font);
+  padding: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cartBtn {
+  cursor: pointer;
+}
+
+.cartBadge {
+  display: inline-block;
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  min-width: 28px;
+  height: 28px;
+  border-radius: 28px;
+  background-color: var(--mize-blue);
+  font-size: 20px;
+  line-height: 28px;
+  color: var(--white);
+  font-weight: 700;
+  text-align: center;
+  padding: 0 6px;
+}
+
+/* 낮은 화면 */
+.header.down {
+  width: 100vw;
+  height: 88px !important;
+  padding-top: 0px;
+}
+.header.down .title {
+  font-size: 34px;
+}
+.header.down .left,
+.header.down .right {
+  height: 100%;
+}
+.header.down .left > div,
+.header.down .right > div {
+  height: 100%;
+  font-size: 40px;
+}
+
+/* 고대비모드 */
+
+:global(body.contrast-on) .header {
+  background: var(--ct-bg);
+  color: var(--ct-txt);
+}
+:global(body.contrast-on) .title {
+  color: var(--ct-txt);
+}
+:global(body.contrast-on) .cartBadge {
+  background-color: var(--ct-blue);
+  color: var(--ct-bg);
+}

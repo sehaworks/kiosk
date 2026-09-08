@@ -1,0 +1,160 @@
+:root {
+  --tab-h: 100px; /* 키오스크 큰 터치 영역 */
+  --tab-pad-x: 20px;
+  --tab-gap: 8px;
+  --underline-h: 8px;
+
+  --color-muted: #b5b5b5;
+  --color-line: #e9edf3;
+}
+
+/* 바 전체 */
+.wrapper {
+  position: relative;
+  height: var(--tab-h);
+  background: var(--white);
+  /* 더블탭 확대/롱탭 선택 방지 + 가로 스와이프만 허용 */
+  -webkit-user-select: none;
+  user-select: none;
+  touch-action: pan-x;
+  padding: 0 30px;
+  overflow: hidden; /* 내부 마진/밑줄로 인해 새지 않게 */
+  box-sizing: border-box;
+}
+
+/* 스크롤 트랙 */
+.track {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  /* gap: var(--tab-gap); */
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+  height: calc(var(--tab-h));
+}
+.track::-webkit-scrollbar {
+  display: none;
+} /* Chrome/Safari */
+
+/* 각 탭 */
+.tab {
+  position: relative;
+  flex: 0 0 auto;
+  min-width: 204px;
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  color: var(--color-muted);
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
+/* 라벨 영역 */
+.label {
+  pointer-events: none;
+  margin: 30px 50px;
+}
+
+/* 밑줄 */
+.underline {
+  position: absolute;
+  left: var(--tab-pad-x);
+  right: var(--tab-pad-x);
+  bottom: 0;
+  height: var(--underline-h);
+  background: var(--mize-blue);
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 160ms ease-out;
+}
+
+/* 활성화 상태: 글자색 진하게 + 밑줄 표시 */
+.active {
+  color: var(--black-font);
+}
+.active .underline {
+  transform: scaleX(1);
+}
+
+/* 좌우 가장자리 페이드(오버플로우 시 시각적 힌트) */
+.fade {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 24px;
+  pointer-events: none;
+  display: none;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0)
+  );
+}
+.leftFade {
+  left: 0;
+}
+.rightFade {
+  right: 0;
+  transform: scaleX(-1);
+}
+
+/* 스크롤이 있을 때만 페이드 보이게 하고 싶다면 필요 시 JS에서 토글해도 됨 */
+
+/* 낮은화면 */
+.wrapper.down {
+  width: 260px;
+  height: 500px;
+  padding: 20px 30px;
+}
+.wrapper.down .track {
+  flex-direction: column;
+  height: fit-content;
+  max-height: 500px;
+  gap: 16px;
+  overflow: visible;
+}
+.wrapper.down .track button {
+  width: 200px;
+  height: 72px;
+  border: 1px solid var(--border-gray);
+  border-radius: 20px;
+  font-size: 28px;
+}
+
+.wrapper.down .underline {
+  display: none;
+}
+
+.wrapper.down .track button.active {
+  background-color: var(--mize-blue);
+  color: var(--white);
+  border-color: var(--mize-blue);
+}
+
+/* 고대비모드 */
+:global(body.contrast-on) .wrapper {
+  background-color: var(--ct-bg);
+}
+:global(body.contrast-on) .tab {
+  color: var(--ct-txt2);
+}
+:global(body.contrast-on) .active {
+  color: var(--ct-txt);
+}
+
+:global(body.contrast-on) .underline {
+  background-color: var(--ct-blue);
+}

@@ -1,0 +1,15 @@
+{
+  "go_to_main": "返回主页",
+  "close": "关闭",
+  "exceed_limit": {
+    "title": "需要人工协助",
+    "content1": "自助机最多可购买{{limit}}张。",
+    "content2": "团体购票请前往服务台办理。",
+    "content3": "给您带来不便，敬请谅解。"
+  },
+  "inactivity_countdown": {
+    "title": "自动退出提示",
+    "message": "由于一段时间内无操作，系统将自动返回主界面。",
+    "countdown_text": "秒后返回主界面"
+  }
+}

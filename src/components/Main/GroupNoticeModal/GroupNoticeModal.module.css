@@ -1,0 +1,58 @@
+/* productList가 position: relative여야 이 overlay가 그 영역을 덮음 */
+.overlay {
+  position: absolute; /* ✅ 부모(productList) 기준으로 덮기 */
+  inset: 0; /* 상하좌우 0 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 20; /* productList 내부 카드들 보다 위 */
+  /* pointer-events 기본값은 auto → 바깥 클릭 시 onClose 동작 */
+}
+
+.modal {
+  width: min(1080px, 90%); /* 반응형 너비 */
+  min-height: 45vh;
+  background: var(--white);
+  border-radius: 20px;
+  padding: 60px 45px;
+  /* box-shadow: 0 2px 40px rgba(0, 0, 0, 0.18); */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5rem;
+  border: 1px solid var(--gray-font);
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--black-font);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.content {
+  font-size: 2.3rem;
+  line-height: 1.5;
+  color: var(--black-font);
+  display: grid;
+  place-items: center; /* 내용도 가운데 */
+  text-align: center;
+  margin-bottom: 8rem;
+}
+
+.okBtn {
+  justify-self: center;
+  /* padding: 12px 24px; */
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 50px;
+  font-weight: 700;
+  background: var(--light-gray);
+  color: var(--gray-font);
+  height: 8rem;
+  width: 100%;
+}
